@@ -3,8 +3,9 @@ var pigLatin = function(word) {
   var vowel_not_found = true;
   var new_end = "";
 
+
   while (vowel_not_found) {
-    if(isVowel(word[0])) {
+    if(isVowel(word[0]))  {
       vowel_not_found = false;
   } else if ((word[0] === "q") && (word[1] == "u")) {
     new_end = new_end + word[0] + word[1];
@@ -26,7 +27,14 @@ var isVowel = function(letter) {
   }
 };
 
+// && (word[0] != "y"))
 
+// } else if ((word[0] === "y")) {
+//     new_end = new_end + word[0];
+//     word = word.slice(1);
+//     return word + new_end + "ay";
+
+// (word[0] != "y"))
 
 // another
 // for(var i=0; i < word.length; i += 1) {
