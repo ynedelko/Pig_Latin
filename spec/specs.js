@@ -12,6 +12,21 @@ describe('pigLatin', function() {
     expect(pigLatin("three")).to.equal("eethray");
   });
 
+  it("moves word combinations of 'qu' from the front to the back and adds 'ay' to the end", function() {
+   expect(pigLatin("queen")).to.equal("eenquay");
+  });
+
+  it("moves word combinations of 'qu' towards the back and adds 'ay' to the end", function() {
+   expect(pigLatin("squeal")).to.equal("ealsquay");
+  });
+
+  it("treats the 'y' as a consonant, for words that start with a 'y'", function() {
+    expect(pigLatin("youth")).to.equal("outhyay");
+  });
+
+  it("treats the 'y' as a vowel, for words that don't start with a 'y'", function() {
+    expect(pigLatin("bye")).to.equal("yebay");
+  });
 });
 
 describe('isVowel', function() {
