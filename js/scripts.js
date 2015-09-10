@@ -3,7 +3,7 @@ var pigLatin = function(word) {
   var vowel_not_found = true;
   var new_end = "";
 
-// we took it out of the while look because we're only dealing with the first letter, the while loop will loop through all the letters
+// we took it out of the while loop because we're only dealing with the first letter, if left in the while loop, it would loop through all the letters in the word
   if (word[0] === "y") {
     new_end = new_end + word[0];
     word = word.slice(1);
