@@ -32,6 +32,18 @@ var isVowel = function(letter) {
   }
 };
 
+$(document).ready(function() {
+  $("form#pig-latin-translator").submit(function(event) {
+    var word = ($('input#word').val());
+    var output = pigLatin(word);
+
+    $(".word").text(word);
+    $(".output").text(output);
+
+    $("#result").show();
+    event.preventDefault();
+  });
+});
 
 
 // another way to do this
